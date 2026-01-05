@@ -25,6 +25,7 @@ class AppTextField(ft.TextField):
             password=password,
             border_radius=12,
             border_width=0.5,
+            width=400,
             content_padding=ft.padding.symmetric(14, 16),
             **kwargs,
         )

@@ -5,6 +5,7 @@ from app.modules.auth.ui.forgot_password_page import build_forgot_password_page
 from app.modules.auth.ui.register_page import build_register_page
 from app.modules.auth.ui.reset_password_token_page import build_reset_password_token_page
 from app.modules.auth.ui.reset_password_new_page import build_reset_password_new_page
+from app.modules.home.ui.home_page import build_home_page
 # from app.modules.auth.ui.register_complementary_page import build_register_complementary_page
 
 
@@ -25,4 +26,6 @@ def get_app_routes() -> dict[str, callable]:
         # ─────────────────────────────
         # HOME
         # ─────────────────────────────
+
+        Routes.HOME: build_home_page,
     }

@@ -15,13 +15,16 @@ class Router:
     def _on_route_change(self, e: ft.RouteChangeEvent) -> None:
         view_factory = self.routes.get(e.route) or self.routes.get(Routes.DEFAULT)
         content = view_factory(self.page)
-        self.shell.set_content(content)
         
-        for control in self.page.controls:
-            if isinstance(control, AppShell):
-                control.set_content(content)
-                break
-        
+        is_main_route = e.route in Routes.MAIN_NAV_ROUTES
+
+        should_center = not is_main_route
+
+        self.shell.set_content(
+            content, 
+            show_nav=is_main_route, 
+            centered=should_center
+        )
         self.page.update()
 
     def _notify_shells(self):

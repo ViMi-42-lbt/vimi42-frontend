@@ -18,6 +18,7 @@ class PrimaryButton(ft.Container):
 
         super().__init__(
             alignment=ft.alignment.center,
+            width=400,
             height=48,
             border_radius=12,
             bgcolor=ft.Colors.PRIMARY,

@@ -1,5 +1,7 @@
 import flet as ft
 
+import app.core.theme.colors as golden_soft
+
 # =========================
 # TITLES
 # =========================
@@ -48,4 +50,19 @@ body_secondary = ft.TextStyle(
     size=14,
     weight=ft.FontWeight.W_400,
     height=1.5,
+)
+
+body_secondary_thin = ft.TextStyle(
+    font_family="Inter",
+    size=14,
+    weight=ft.FontWeight.W_200,
+    height=1.5,
+)
+
+body_tertiary = ft.TextStyle(
+    font_family="Inter",
+    size=12,
+    weight=ft.FontWeight.W_200,
+    height=1.5,
+    color=golden_soft,
 )
